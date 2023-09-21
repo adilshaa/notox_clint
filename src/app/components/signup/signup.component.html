@@ -1,0 +1,23 @@
+<div class="container" onclick="onclick">
+  <div class="top"></div>
+  <div class="bottom"></div>
+  <div class="center">
+    <h2>Please SignIn</h2>
+    <form [formGroup]="form"  (ngSubmit)="signInUser()">
+      <input type="name" placeholder="name" formControlName="name" (keyup.enter)="signInUser()" />
+      <input type="email" placeholder="email" formControlName="email" (keyup.enter)="signInUser()"/>
+
+      <input
+        type="password"
+        placeholder="password"
+        formControlName="password"
+        (keyup.enter)="signInUser()"
+      />
+    </form>
+    &nbsp;
+    <a routerLink="/signin" class="signup">
+      &nbsp;<span class="signup_label">Already have an account - > ? </span>
+      Signin</a
+    >
+  </div>
+</div>

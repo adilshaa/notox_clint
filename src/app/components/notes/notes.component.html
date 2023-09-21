@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="section trick" id="trick">
+    <h2 class="section__title">Trick Or Treat</h2>
+    <div class="adding__button">
+      <button class="Note_button" (dblclick)="addNote()">Add</button>
+    </div>
+
+    <div class="trick__container container grid">
+      <div class="trick__content" *ngFor="let note of notes">
+        <div class="title">
+          <input
+            type="text"
+            placeholder="Title"
+            [(ngModel)]="note.title"
+            (input)="onInputTitle(note, note._id)"
+          />
+        </div>
+        <h6 class="time_date">
+          <span
+            >{{ note.date | date : "dd-MMMM-yyyy" }} &nbsp; &nbsp;
+            {{ note.date | date : "hh:mm a" }} &nbsp; &nbsp;|&nbsp;&nbsp;
+            <span style="color: #fff"> 
+              {{
+                getCharacterCountWithoutSpaces(note.title, note.description)
+              }}
+              charectors
+            </span></span
+          >
+        </h6>
+        <div class="desc">
+          <textarea
+            class="descriptionInput"
+            name="desc"
+            id=""
+            rows="4"
+            cols="44"
+            placeholder="Start typing"
+            [(ngModel)]="note.description"
+            (input)="onInputDesc(note, note._id)"
+          ></textarea>
+        </div>
+        <button class="button trick__button" (dblclick)="deleteNote(note._id)">
+          D
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

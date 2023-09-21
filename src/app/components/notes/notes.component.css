@@ -1,0 +1,154 @@
+.section {
+  padding: 1.4rem 0 1rem;
+  height: auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.trick__container {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+.trick__content {
+  position: relative;
+  height: 200px;
+  background: rgb(91, 89, 89);
+  border-radius: 1rem;
+  /* padding: 1rem 0 1rem 0; */
+  text-align: center;
+  overflow: hidden;
+}
+
+.trick__img {
+  width: 90px;
+  transition: 0.3s;
+}
+
+.trick__subtitle,
+.trick__price {
+  display: block;
+}
+
+.trick__subtitle {
+  font-size: var(--smaller-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+.trick__title,
+.trick__price {
+  color: red;
+  font-weight: blue;
+  font-size: black;
+}
+
+.trick__button {
+  display: inline-flex;
+  padding: 1rem;
+  border-radius: 0.25rem 0.25rem 0.75rem 0.25rem;
+  position: absolute;
+  right: -3rem;
+  bottom: 0;
+}
+
+.trick__icon {
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+.trick__content:hover .trick__img {
+  transform: translateY(-0.5rem);
+}
+
+.trick__content:hover .trick__button {
+  right: 0;
+}
+
+.title {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+ h6 {
+  font-size:8px;
+  font-weight: 300;
+  color: #f7f7f7;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.time_date{
+  display: flex;
+  justify-content: left;
+  padding-left: 13px;
+  color: rgb(255, 162, 0);
+}
+.title input {
+  color: black;
+  width: 269px;
+  font-size: 18px;
+  background-color: rgb(91, 89, 89);
+  height: 34px;
+  margin-left: 20px;
+  border: none;
+  outline: none;
+}
+.title input::placeholder {
+  font-size: 18px;
+  color: rgb(17, 17, 17);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  /* Add any other styles you want here */
+}
+.descriptionInput  {
+  width: 94%;
+  height: 140px;
+  border: none;
+  padding: 9px;
+  font-size: 13px;
+  line-height: 1.5;
+  background-color: rgb(91, 89, 89);
+  color: #000000;
+  border-radius: 3px;
+  outline: none;
+   overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #333 #f7f7f7;
+}
+.descriptionInput::-webkit-scrollbar {
+    width: 1.4px;
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+.descriptionInput::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Customize the scrollbar track (background) */
+.descriptionInput::-webkit-scrollbar-track {
+    background-color: #f7f7f7;
+}
+.adding__button{
+  display: flex;
+justify-content: right;
+padding-right: 20px;
+}
+.Note_button{
+  height: 30px;
+  width: 60px;
+  background-color: #333;
+  color: #fff;
+  border: #000000 ;
+  border-radius: 10px;
+
+}
